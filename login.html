@@ -10,137 +10,391 @@
 
     <title>Consumer Login</title>
 
+    <!-- Bootstrap CSS -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- Custom CSS -->
+
     <link rel="stylesheet"
           href="css/style.css">
 
-    <script src="js/script.js" defer></script>
-
-    <link rel="icon" type="image/png" href="images/favicon.jpg">
 </head>
 
 <body>
 
-<nav>
+<!-- ================= NAVBAR ================= -->
 
-    <div class="logo">
+<nav class="navbar navbar-expand-lg navbar-dark bg-success shadow">
 
-        🌿 EcoEnergy
+    <div class="container">
+
+        <a class="navbar-brand fw-bold"
+           href="index.html">
+
+            <i class="bi bi-lightning-charge-fill"></i>
+
+            EcoEnergy
+
+        </a>
+
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse"
+             id="navbarNav">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+
+                    <a class="nav-link"
+                       href="index.html">
+
+                        Home
+
+                    </a>
+
+                </li>
+
+                <li class="nav-item">
+
+                    <a class="nav-link"
+                       href="register.html">
+
+                        Register
+
+                    </a>
+
+                </li>
+
+                <li class="nav-item">
+
+                    <a class="nav-link active"
+                       href="login.html">
+
+                        Login
+
+                    </a>
+
+                </li>
+
+                <li class="nav-item">
+
+                    <a class="nav-link"
+                       href="catalog.html">
+
+                        Catalog
+
+                    </a>
+
+                </li>
+
+                <li class="nav-item">
+
+                    <a class="nav-link"
+                       href="usage.html">
+
+                        Usage
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </div>
 
     </div>
 
-    <ul>
-
-        <li><a href="index.html">Home</a></li>
-        <li><a href="register.html">Register</a></li>
-        <li><a href="login.html">Login</a></li>
-        <li><a href="catalog.html">Catalog</a></li>
-        <li><a href="usage.html">Usage</a></li>
-
-    </ul>
-
 </nav>
 
-<section class="form-page">
+<!-- ================= LOGIN SECTION ================= -->
 
-<div class="form-container">
+<section class="py-5 bg-light">
 
-<h1>
+    <div class="container">
 
-Consumer Login
+        <div class="row justify-content-center">
 
-</h1>
+            <div class="col-lg-5 col-md-7">
 
-<form id="loginForm">
-    <div class="input-group">
+                <div class="card shadow-lg border-0 rounded-4">
 
-<label for="loginEmail">
+                    <div class="card-body p-5">
 
-Email Address
+                        <div class="text-center mb-4">
 
-</label>
+                            <i class="bi bi-person-circle text-success display-3"></i>
 
-<input
-type="email"
-id="loginEmail"
-placeholder="Enter your email"
-required>
+                            <h2 class="fw-bold text-success mt-3">
 
-</div>
+                                Welcome Back
 
+                            </h2>
 
-<div class="input-group">
+                            <p class="text-muted">
 
-<label for="loginPassword">
+                                Login to continue to your EcoEnergy account
 
-Password
+                            </p>
 
-</label>
+                        </div>
 
-<input
-type="password"
-id="loginPassword"
-placeholder="Enter your password"
-required>
+                        <!-- Login Form -->
 
-</div>
+                        <form id="loginForm">
 
+                            <div class="mb-3">
 
-<div class="checkbox-group">
+                                <label class="form-label">
 
-<input
-type="checkbox"
-id="remember">
+                                    Email Address
 
-<label for="remember">
+                                </label>
 
-Remember Me
+                                <input
+                                    type="email"
+                                    id="loginEmail"
+                                    class="form-control"
+                                    placeholder="Enter your email"
+                                    required>
 
-</label>
+                            </div>
 
-</div>
+                            <div class="mb-3">
 
+                                <label class="form-label">
 
-<button type="submit">
+                                    Password
 
-Login
+                                </label>
 
-</button>
+                                <input
+                                    type="password"
+                                    id="loginPassword"
+                                    class="form-control"
+                                    placeholder="Enter your password"
+                                    required>
 
+                            </div>
 
-<div class="form-links">
+                            <div class="d-flex justify-content-between align-items-center mb-4">
 
-<p>
+                                <div class="form-check">
 
-Don't have an account?
+                                    <input
+                                        class="form-check-input"
+                                        type="checkbox"
+                                        id="remember">
 
-<a href="register.html">
+                                    <label class="form-check-label"
+                                           for="remember">
 
-Register Here
+                                        Remember Me
 
-</a>
+                                    </label>
 
-</p>
+                                </div>
 
-</div>
+                                <a href="#"
+                                   class="text-success text-decoration-none">
 
-</form>
+                                    Forgot Password?
 
-</div>
+                                </a>
+
+                            </div>
+
+                            <div class="d-grid">
+
+                                <button
+                                    type="submit"
+                                    class="btn btn-success btn-lg">
+
+                                    <i class="bi bi-box-arrow-in-right"></i>
+
+                                    Login
+
+                                </button>
+
+                            </div>
+
+                            <div class="text-center mt-4">
+
+                                <p>
+
+                                    Don't have an account?
+
+                                    <a href="register.html"
+                                       class="text-success fw-bold text-decoration-none">
+
+                                        Register Here
+
+                                    </a>
+
+                                </p>
+
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
-<footer>
 
-<div class="footer-bottom">
+<!-- ================= FOOTER ================= -->
 
-<p>
+<footer class="bg-dark text-white pt-5 pb-3">
 
-© 2026 Renewable Energy Optimization System
+    <div class="container">
 
-</p>
+        <div class="row">
 
-</div>
+            <div class="col-md-4 mb-4">
+
+                <h4 class="fw-bold">
+
+                    <i class="bi bi-lightning-charge-fill"></i>
+
+                    EcoEnergy
+
+                </h4>
+
+                <p>
+
+                    Renewable Energy Optimization System
+                    helping users embrace clean,
+                    sustainable energy for a greener future.
+
+                </p>
+
+            </div>
+
+            <div class="col-md-4 mb-4">
+
+                <h5>
+
+                    Quick Links
+
+                </h5>
+
+                <ul class="list-unstyled">
+
+                    <li>
+                        <a href="index.html" class="text-white text-decoration-none">
+                            Home
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="register.html" class="text-white text-decoration-none">
+                            Register
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="login.html" class="text-white text-decoration-none">
+                            Login
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="catalog.html" class="text-white text-decoration-none">
+                            Catalog
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="usage.html" class="text-white text-decoration-none">
+                            Usage
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <div class="col-md-4 mb-4">
+
+                <h5>
+
+                    Contact Us
+
+                </h5>
+
+                <p>
+
+                    <i class="bi bi-envelope-fill"></i>
+
+                    support@ecoenergy.com
+
+                </p>
+
+                <p>
+
+                    <i class="bi bi-telephone-fill"></i>
+
+                    +91 123XXX7890
+
+                </p>
+
+                <p>
+
+                    <i class="bi bi-geo-alt-fill"></i>
+
+                    Hyderabad, Telangana
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <hr class="border-secondary">
+
+        <div class="text-center">
+
+            <p class="mb-0">
+
+                © 2026 Renewable Energy Optimization System.
+                All Rights Reserved.
+
+            </p>
+
+        </div>
+
+    </div>
 
 </footer>
+
+<!-- Bootstrap JavaScript -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom JavaScript -->
+
+<script src="js/script.js"></script>
 
 </body>
 

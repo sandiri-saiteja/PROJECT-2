@@ -2,165 +2,280 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Renewable Energy Optimization System</title>
 
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
     <link rel="stylesheet"
-          href="css/style.css">
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
-    <link rel="preconnect"
-          href="https://fonts.googleapis.com">
-
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
-          rel="stylesheet">
-
-    <link rel="icon" type="image/png" href="images/favicon.jpg">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-<nav>
+<!-- ================= NAVBAR ================= -->
 
-    <div class="logo">
+<nav class="navbar navbar-expand-lg navbar-dark bg-success shadow sticky-top">
 
-        🌿 EcoEnergy
+    <div class="container">
 
-    </div>
+        <a class="navbar-brand fw-bold" href="index.html">
+            <i class="bi bi-lightning-charge-fill"></i>
+            EcoEnergy
+        </a>
 
-    <ul>
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
 
-        <li><a href="index.html">Home</a></li>
+            <span class="navbar-toggler-icon"></span>
 
-        <li><a href="register.html">Register</a></li>
+        </button>
 
-        <li><a href="login.html">Login</a></li>
+        <div class="collapse navbar-collapse"
+             id="navbarNav">
 
-        <li><a href="catalog.html">Catalog</a></li>
+            <ul class="navbar-nav ms-auto">
 
-        <li><a href="usage.html">Usage</a></li>
+                <li class="nav-item">
 
-    </ul>
+                    <a class="nav-link active"
+                       href="index.html">
 
-</nav>
+                        Home
 
+                    </a>
 
-<div class="container">
+                </li>
 
-<section class="hero">
+                <li class="nav-item">
 
-    <div class="hero-text">
+                    <a class="nav-link"
+                       href="register.html">
 
-        <h1>
+                        Register
 
-            Renewable Energy
-            Optimization System
+                    </a>
 
-        </h1>
+                </li>
 
-        <p>
+                <li class="nav-item">
 
-            Discover clean energy resources,
-            monitor energy consumption,
-            and contribute towards a greener
-            and more sustainable future.
+                    <a class="nav-link"
+                       href="login.html">
 
-        </p>
+                        Login
 
-        <div class="hero-buttons">
+                    </a>
 
-            <a href="catalog.html"
-               class="btn">
+                </li>
 
-                Explore Resources
+                <li class="nav-item">
 
-            </a>
+                    <a class="nav-link"
+                       href="catalog.html">
 
-            <a href="register.html"
-               class="btn secondary-btn">
+                        Catalog
 
-                Get Started
+                    </a>
 
-            </a>
+                </li>
+
+                <li class="nav-item">
+
+                    <a class="nav-link"
+                       href="usage.html">
+
+                        Usage
+
+                    </a>
+
+                </li>
+
+            </ul>
 
         </div>
 
     </div>
 
-    <div class="hero-image">
+</nav>
 
-        <img src="images/renewable.jpg"
-             alt="Renewable Energy">
+<!-- ================= HERO ================= -->
+
+<section class="bg-light py-5">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-6">
+
+                <h1 class="display-4 fw-bold text-success">
+
+                    Renewable Energy
+                    Optimization System
+
+                </h1>
+
+                <p class="lead mt-4">
+
+                    Explore renewable energy resources,
+                    monitor energy consumption,
+                    and contribute to a greener
+                    future through smart energy
+                    management.
+
+                </p>
+
+                <div class="mt-4">
+
+                    <a href="catalog.html"
+                       class="btn btn-success btn-lg me-3">
+
+                        Explore Resources
+
+                    </a>
+
+                    <a href="register.html"
+                       class="btn btn-outline-success btn-lg">
+
+                        Get Started
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-6 text-center">
+
+                <img src="images/renewable.jpg"
+                     class="img-fluid rounded shadow-lg"
+                     alt="Renewable Energy">
+
+            </div>
+
+        </div>
 
     </div>
 
 </section>
 <!-- ================= FEATURES ================= -->
 
-<section class="features">
+<section class="py-5">
 
-    <h2>
+    <div class="container">
 
-        Why Choose Renewable Energy?
+        <div class="text-center mb-5">
 
-    </h2>
+            <h2 class="fw-bold text-success">
+                Why Choose Renewable Energy?
+            </h2>
 
-    <div class="feature-grid">
-
-        <div class="feature-card">
-
-            <img src="images/solar.jpg"
-                 alt="Solar Energy">
-
-            <h3>Solar Power</h3>
-
-            <p>
-
-                Harness sunlight to generate clean,
-                sustainable electricity with high efficiency
-                and low maintenance.
-
+            <p class="text-muted">
+                Clean, sustainable, and efficient energy solutions for a better tomorrow.
             </p>
 
         </div>
 
-        <div class="feature-card">
+        <div class="row g-4">
 
-            <img src="images/wind.jpg"
-                 alt="Wind Energy">
+            <div class="col-md-4">
 
-            <h3>Wind Energy</h3>
+                <div class="card h-100 shadow border-0">
 
-            <p>
+                    <img src="images/solar.jpg"
+                         class="card-img-top"
+                         alt="Solar Energy">
 
-                Convert natural wind into renewable
-                electricity using modern turbine technology.
+                    <div class="card-body text-center">
 
-            </p>
+                        <i class="bi bi-sun-fill text-warning fs-1"></i>
 
-        </div>
+                        <h4 class="mt-3">
+                            Solar Energy
+                        </h4>
 
-        <div class="feature-card">
+                        <p class="text-muted">
 
-            <img src="images/hydro.jpg"
-                 alt="Hydro Energy">
+                            Generate electricity using sunlight through
+                            photovoltaic panels with high efficiency
+                            and low maintenance.
 
-            <h3>Hydroelectric Power</h3>
+                        </p>
 
-            <p>
+                    </div>
 
-                Produce reliable energy using flowing
-                water while minimizing carbon emissions.
+                </div>
 
-            </p>
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="card h-100 shadow border-0">
+
+                    <img src="images/wind.jpg"
+                         class="card-img-top"
+                         alt="Wind Energy">
+
+                    <div class="card-body text-center">
+
+                        <i class="bi bi-wind text-primary fs-1"></i>
+
+                        <h4 class="mt-3">
+                            Wind Energy
+                        </h4>
+
+                        <p class="text-muted">
+
+                            Produce clean electricity through
+                            modern wind turbines that harness
+                            natural wind power.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="card h-100 shadow border-0">
+
+                    <img src="images/hydro.jpg"
+                         class="card-img-top"
+                         alt="Hydro Energy">
+
+                    <div class="card-body text-center">
+
+                        <i class="bi bi-droplet-fill text-info fs-1"></i>
+
+                        <h4 class="mt-3">
+                            Hydroelectric Energy
+                        </h4>
+
+                        <p class="text-muted">
+
+                            Generate renewable electricity
+                            using rivers and flowing water
+                            with excellent efficiency.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
 
         </div>
 
@@ -171,222 +286,288 @@
 
 <!-- ================= STATISTICS ================= -->
 
-<section class="stats">
+<section class="bg-success text-white py-5">
 
-    <div class="stats-grid">
+    <div class="container">
 
-        <div class="stat-card">
+        <div class="row text-center g-4">
 
-            <h2>6+</h2>
+            <div class="col-6 col-lg-3">
 
-            <p>
+                <h1 class="fw-bold">
+                    6+
+                </h1>
 
-                Renewable Resources
+                <p>
+                    Energy Sources
+                </p>
 
-            </p>
+            </div>
 
-        </div>
+            <div class="col-6 col-lg-3">
 
-        <div class="stat-card">
+                <h1 class="fw-bold">
+                    92%
+                </h1>
 
-            <h2>92%</h2>
+                <p>
+                    Maximum Efficiency
+                </p>
 
-            <p>
+            </div>
 
-                Highest Efficiency
+            <div class="col-6 col-lg-3">
 
-            </p>
+                <h1 class="fw-bold">
+                    100%
+                </h1>
 
-        </div>
+                <p>
+                    Renewable Resources
+                </p>
 
-        <div class="stat-card">
+            </div>
 
-            <h2>100%</h2>
+            <div class="col-6 col-lg-3">
 
-            <p>
+                <h1 class="fw-bold">
+                    24/7
+                </h1>
 
-                Renewable Sources
+                <p>
+                    Energy Monitoring
+                </p>
 
-            </p>
-
-        </div>
-
-        <div class="stat-card">
-
-            <h2>24/7</h2>
-
-            <p>
-
-                Energy Monitoring
-
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ================= ABOUT SECTION ================= -->
-
-<section class="about">
-
-    <div class="about-container">
-
-        <div>
-
-            <img src="images/renewable.jpg"
-                 alt="Renewable Energy">
-
-        </div>
-
-        <div class="about-content">
-
-            <h2>
-
-                Building a Sustainable Future
-
-            </h2>
-
-            <p>
-
-                Renewable energy is transforming the way
-                we produce and consume electricity.
-                By using natural resources like sunlight,
-                wind, water, biomass, and geothermal heat,
-                we can reduce pollution and preserve our
-                environment for future generations.
-
-            </p>
-
-            <p>
-
-                This Renewable Energy Optimization System
-                helps users explore clean energy sources,
-                compare their efficiency, and understand
-                their environmental and economic benefits.
-
-            </p>
-
-            <a href="catalog.html"
-               class="btn">
-
-                Explore Catalog
-
-            </a>
+            </div>
 
         </div>
 
     </div>
 
 </section>
+<!-- ================= ABOUT ================= -->
 
+<section class="py-5 bg-light">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-6">
+
+                <img src="images/green-energy.webp"
+                     class="img-fluid rounded shadow"
+                     alt="Green Energy">
+
+            </div>
+
+            <div class="col-lg-6">
+
+                <h2 class="fw-bold text-success mb-4">
+
+                    About EcoEnergy
+
+                </h2>
+
+                <p class="lead">
+
+                    EcoEnergy is a Renewable Energy Optimization System
+                    designed to educate users about renewable energy
+                    resources while helping them monitor and optimize
+                    their energy consumption.
+
+                </p>
+
+                <p>
+
+                    Our goal is to encourage the use of sustainable
+                    energy resources such as Solar, Wind,
+                    Hydroelectric, Biomass, Geothermal,
+                    and Tidal energy.
+
+                </p>
+
+                <div class="row mt-4">
+
+                    <div class="col-6">
+
+                        <h4 class="text-success">
+                            100%
+                        </h4>
+
+                        <p>Renewable</p>
+
+                    </div>
+
+                    <div class="col-6">
+
+                        <h4 class="text-success">
+                            Eco-Friendly
+                        </h4>
+
+                        <p>Future Ready</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
 
 <!-- ================= CALL TO ACTION ================= -->
 
-<section class="cta">
+<section class="py-5 text-center">
 
-    <h2>
+    <div class="container">
 
-        Join the Green Energy Revolution
+        <h2 class="fw-bold">
 
-    </h2>
+            Ready to Begin Your Green Energy Journey?
 
-    <p>
+        </h2>
 
-        Register today and start exploring renewable
-        energy resources to build a cleaner and more
-        sustainable future.
+        <p class="lead text-muted mb-4">
 
-    </p>
+            Register today and explore renewable energy
+            solutions for a cleaner and more sustainable future.
 
-    <a href="register.html"
-       class="btn">
+        </p>
 
-        Register Now
+        <a href="register.html"
+           class="btn btn-success btn-lg me-3">
 
-    </a>
+            Register Now
+
+        </a>
+
+        <a href="catalog.html"
+           class="btn btn-outline-success btn-lg">
+
+            Browse Resources
+
+        </a>
+
+    </div>
 
 </section>
 
-
 <!-- ================= FOOTER ================= -->
 
-<footer>
+<footer class="bg-dark text-white pt-5 pb-3">
 
-    <div class="footer-container">
+    <div class="container">
 
-        <div>
+        <div class="row">
 
-            <h3>🌿 EcoEnergy</h3>
+            <div class="col-md-4 mb-4">
 
-            <p>
+                <h4 class="fw-bold">
 
-                Renewable Energy Optimization System
-                developed to encourage sustainable
-                energy adoption using modern web
-                technologies.
+                    <i class="bi bi-lightning-charge-fill"></i>
+
+                    EcoEnergy
+
+                </h4>
+
+                <p>
+
+                    Renewable Energy Optimization System
+                    promoting sustainable and clean
+                    energy solutions.
+
+                </p>
+
+            </div>
+
+            <div class="col-md-4 mb-4">
+
+                <h5>
+
+                    Quick Links
+
+                </h5>
+
+                <ul class="list-unstyled">
+
+                    <li><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+
+                    <li><a href="register.html" class="text-white text-decoration-none">Register</a></li>
+
+                    <li><a href="login.html" class="text-white text-decoration-none">Login</a></li>
+
+                    <li><a href="catalog.html" class="text-white text-decoration-none">Catalog</a></li>
+
+                    <li><a href="usage.html" class="text-white text-decoration-none">Usage</a></li>
+
+                </ul>
+
+            </div>
+
+            <div class="col-md-4 mb-4">
+
+                <h5>
+
+                    Contact Us
+
+                </h5>
+
+                <p>
+
+                    <i class="bi bi-envelope-fill"></i>
+
+                    support@ecoenergy.com
+
+                </p>
+
+                <p>
+
+                    <i class="bi bi-telephone-fill"></i>
+
+                    +91 123XXX7890
+
+                </p>
+
+                <p>
+
+                    <i class="bi bi-geo-alt-fill"></i>
+
+                    Hyderabad, Telangana
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <hr class="border-secondary">
+
+        <div class="text-center">
+
+            <p class="mb-0">
+
+                © 2026 Renewable Energy Optimization System.
+                All Rights Reserved.
 
             </p>
 
         </div>
-
-        <div>
-
-            <h3>
-
-                Quick Links
-
-            </h3>
-
-            <ul class="footer-links">
-
-                <li><a href="index.html">Home</a></li>
-
-                <li><a href="register.html">Register</a></li>
-
-                <li><a href="login.html">Login</a></li>
-
-                <li><a href="catalog.html">Catalog</a></li>
-
-                <li><a href="usage.html">Usage</a></li>
-
-            </ul>
-
-        </div>
-
-        <div>
-
-            <h3>
-
-                Contact
-
-            </h3>
-
-            <p>Email : support@ecoenergy.com</p>
-
-            <p>Phone : 123XXX7890</p>
-
-            <p>Location : Green Energy Center</p>
-
-        </div>
-
-    </div>
-
-    <div class="footer-bottom">
-
-        <p>
-
-            © 2026 Renewable Energy Optimization System.
-            All Rights Reserved.
-
-        </p>
 
     </div>
 
 </footer>
 
-</div>
+<!-- Bootstrap JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom JS -->
+
+<script src="js/script.js"></script>
 
 </body>
 

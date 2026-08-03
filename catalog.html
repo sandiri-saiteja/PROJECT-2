@@ -10,187 +10,291 @@
 
     <title>Energy Resource Catalog</title>
 
-    <link rel="stylesheet"
-          href="css/style.css">
+    <!-- Bootstrap CSS -->
 
-    <link rel="preconnect"
-          href="https://fonts.googleapis.com">
-
-    <link rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
           rel="stylesheet">
 
-    <script src="js/script.js" defer></script>
+    <!-- Bootstrap Icons -->
 
-    <link rel="icon" type="image/png" href="images/favicon.jpg">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- Custom CSS -->
+
+    <link rel="stylesheet"
+          href="css/style.css">
 
 </head>
 
 <body>
 
-<nav>
+<!-- ================= NAVBAR ================= -->
 
-    <div class="logo">
+<nav class="navbar navbar-expand-lg navbar-dark bg-success shadow sticky-top">
 
-        🌿 EcoEnergy
+    <div class="container">
+
+        <a class="navbar-brand fw-bold"
+           href="index.html">
+
+            <i class="bi bi-lightning-charge-fill"></i>
+
+            EcoEnergy
+
+        </a>
+
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse"
+             id="navbarNav">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="register.html">Register</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html">Login</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="catalog.html">Catalog</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="usage.html">Usage</a>
+                </li>
+
+            </ul>
+
+        </div>
 
     </div>
-
-    <ul>
-
-        <li><a href="index.html">Home</a></li>
-
-        <li><a href="register.html">Register</a></li>
-
-        <li><a href="login.html">Login</a></li>
-
-        <li><a href="catalog.html">Catalog</a></li>
-
-        <li><a href="usage.html">Usage</a></li>
-
-    </ul>
 
 </nav>
 
+<!-- ================= PAGE HEADER ================= -->
+
+<section class="py-5 bg-light">
+
+<div class="container text-center">
+
+<h1 class="display-5 fw-bold text-success">
+
+Renewable Energy Resources
+
+</h1>
+
+<p class="lead text-muted">
+
+Explore renewable technologies that power
+a cleaner and more sustainable future.
+
+</p>
+
+<div class="row mt-5 text-center">
+
+<div class="col-md-4">
+
+<div class="card shadow border-0">
+
+<div class="card-body">
+
+<h2 class="text-success">
+
+6
+
+</h2>
+
+<p>
+
+Energy Resources
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-md-4">
+
+<div class="card shadow border-0">
+
+<div class="card-body">
+
+<h2 class="text-success">
+
+68%
+
+</h2>
+
+<p>
+
+Average Efficiency
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-md-4">
+
+<div class="card shadow border-0">
+
+<div class="card-body">
+
+<h2 class="text-success">
+
+100%
+
+</h2>
+
+<p>
+
+Renewable Sources
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Search -->
+
+<div class="row justify-content-center mt-5">
+
+<div class="col-lg-6">
+
+<input
+
+type="text"
+
+class="form-control form-control-lg"
+
+id="searchBox"
+
+placeholder="🔍 Search Renewable Resources...">
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= RESOURCE CARDS ================= -->
+
+<section class="pb-5">
 
 <div class="container">
 
+<div class="row g-4">
 
-<div class="catalog-header">
+<!-- ================= SOLAR ================= -->
 
-    <h1>
+<div class="col-lg-4 col-md-6">
 
-        Renewable Energy Resources
-
-    </h1>
-
-    <p>
-
-        Explore renewable technologies that can
-        power a sustainable future while reducing
-        environmental impact.
-
-    </p>
-
-</div>
-
-
-<div class="catalog-stats">
-
-    <div class="catalog-stat">
-
-        <h2>6</h2>
-
-        <p>
-
-            Energy Resources
-
-        </p>
-
-    </div>
-
-    <div class="catalog-stat">
-
-        <h2>68%</h2>
-
-        <p>
-
-            Average Efficiency
-
-        </p>
-
-    </div>
-
-    <div class="catalog-stat">
-
-        <h2>100%</h2>
-
-        <p>
-
-            Renewable Sources
-
-        </p>
-
-    </div>
-
-</div>
-
-
-<div class="search-bar">
-
-<input
-type="text"
-placeholder="🔍 Search Renewable Resources..."
-id="searchBox">
-
-</div>
-
-
-<div class="catalog-grid">
-    <!-- ================= SOLAR ================= -->
-
-<div class="card">
-
-    <div class="image-container">
+    <div class="card h-100 shadow border-0">
 
         <img src="images/solar.jpg"
+             class="card-img-top"
              alt="Solar Energy">
 
-    </div>
+        <div class="card-body d-flex flex-column">
 
-    <div class="card-content">
+            <span class="badge bg-warning text-dark mb-2 align-self-start">
 
-        <span class="category">
-            ☀ Solar
-        </span>
-
-        <h3>Solar Energy</h3>
-
-        <p>
-            Generate electricity using sunlight through
-            photovoltaic panels. One of the cleanest and
-            most widely adopted renewable energy sources.
-        </p>
-
-        <div class="progress-title">
-
-            <span>Efficiency</span>
-
-            <span>92%</span>
-
-        </div>
-
-        <div class="progress">
-
-            <div class="progress-bar"
-                 style="width:92%;"></div>
-
-        </div>
-
-        <div class="badge-row">
-
-            <span class="badge efficiency">
-
-                ⚡ 92%
+                ☀ Solar
 
             </span>
 
-            <span class="badge cost">
+            <h4 class="card-title text-success">
 
-                💰 Low Cost
+                Solar Energy
 
-            </span>
+            </h4>
+
+            <p class="card-text">
+
+                Generate electricity using sunlight through photovoltaic
+                panels. Solar energy is clean, sustainable,
+                and one of the fastest-growing renewable
+                energy sources.
+
+            </p>
+
+            <div class="d-flex justify-content-between">
+
+                <small class="fw-bold">
+
+                    Efficiency
+
+                </small>
+
+                <small>
+
+                    92%
+
+                </small>
+
+            </div>
+
+            <div class="progress my-2">
+
+                <div class="progress-bar bg-success"
+                     style="width:92%">
+
+                </div>
+
+            </div>
+
+            <div class="mb-3">
+
+                <span class="badge bg-success">
+
+                    ⚡ 92%
+
+                </span>
+
+                <span class="badge bg-primary">
+
+                    💰 Low Cost
+
+                </span>
+
+            </div>
+
+            <a href="#"
+               class="btn btn-success mt-auto">
+
+                Learn More
+
+            </a>
 
         </div>
-
-        <button>
-
-            Learn More →
-
-        </button>
 
     </div>
 
@@ -199,68 +303,86 @@ id="searchBox">
 
 <!-- ================= WIND ================= -->
 
-<div class="card">
+<div class="col-lg-4 col-md-6">
 
-    <div class="image-container">
+    <div class="card h-100 shadow border-0">
 
         <img src="images/wind.jpg"
+             class="card-img-top"
              alt="Wind Energy">
 
-    </div>
+        <div class="card-body d-flex flex-column">
 
-    <div class="card-content">
+            <span class="badge bg-info mb-2 align-self-start">
 
-        <span class="category">
-
-            🌬 Wind
-
-        </span>
-
-        <h3>Wind Energy</h3>
-
-        <p>
-
-            Electricity generated through modern wind
-            turbines using clean and renewable wind power.
-
-        </p>
-
-        <div class="progress-title">
-
-            <span>Efficiency</span>
-
-            <span>88%</span>
-
-        </div>
-
-        <div class="progress">
-
-            <div class="progress-bar"
-                 style="width:88%;"></div>
-
-        </div>
-
-        <div class="badge-row">
-
-            <span class="badge efficiency">
-
-                ⚡ 88%
+                🌬 Wind
 
             </span>
 
-            <span class="badge cost">
+            <h4 class="card-title text-success">
 
-                💰 Medium
+                Wind Energy
 
-            </span>
+            </h4>
+
+            <p class="card-text">
+
+                Modern wind turbines convert wind into
+                electricity with excellent efficiency,
+                providing clean power while reducing
+                greenhouse gas emissions.
+
+            </p>
+
+            <div class="d-flex justify-content-between">
+
+                <small class="fw-bold">
+
+                    Efficiency
+
+                </small>
+
+                <small>
+
+                    88%
+
+                </small>
+
+            </div>
+
+            <div class="progress my-2">
+
+                <div class="progress-bar bg-success"
+                     style="width:88%">
+
+                </div>
+
+            </div>
+
+            <div class="mb-3">
+
+                <span class="badge bg-success">
+
+                    ⚡ 88%
+
+                </span>
+
+                <span class="badge bg-warning text-dark">
+
+                    💰 Medium
+
+                </span>
+
+            </div>
+
+            <a href="#"
+               class="btn btn-success mt-auto">
+
+                Learn More
+
+            </a>
 
         </div>
-
-        <button>
-
-            Learn More →
-
-        </button>
 
     </div>
 
@@ -269,351 +391,480 @@ id="searchBox">
 
 <!-- ================= HYDRO ================= -->
 
-<div class="card">
+<div class="col-lg-4 col-md-6">
 
-    <div class="image-container">
+    <div class="card h-100 shadow border-0">
 
         <img src="images/hydro.jpg"
-             alt="Hydro Energy">
+             class="card-img-top"
+             alt="Hydroelectric Energy">
 
-    </div>
+        <div class="card-body d-flex flex-column">
 
-    <div class="card-content">
+            <span class="badge bg-primary mb-2 align-self-start">
 
-        <span class="category">
-
-            💧 Hydro
-
-        </span>
-
-        <h3>Hydroelectric Energy</h3>
-
-        <p>
-
-            Generate electricity using flowing water
-            from rivers and dams with excellent efficiency.
-
-        </p>
-
-        <div class="progress-title">
-
-            <span>Efficiency</span>
-
-            <span>90%</span>
-
-        </div>
-
-        <div class="progress">
-
-            <div class="progress-bar"
-                 style="width:90%;"></div>
-
-        </div>
-
-        <div class="badge-row">
-
-            <span class="badge efficiency">
-
-                ⚡ 90%
+                💧 Hydro
 
             </span>
 
-            <span class="badge cost">
+            <h4 class="card-title text-success">
 
-                💰 Medium
+                Hydroelectric Energy
 
-            </span>
+            </h4>
+
+            <p class="card-text">
+
+                Hydroelectric power generates electricity
+                using flowing water from rivers and dams,
+                making it one of the most efficient
+                renewable energy sources.
+
+            </p>
+
+            <div class="d-flex justify-content-between">
+
+                <small class="fw-bold">
+
+                    Efficiency
+
+                </small>
+
+                <small>
+
+                    90%
+
+                </small>
+
+            </div>
+
+            <div class="progress my-2">
+
+                <div class="progress-bar bg-success"
+                     style="width:90%">
+
+                </div>
+
+            </div>
+
+            <div class="mb-3">
+
+                <span class="badge bg-success">
+
+                    ⚡ 90%
+
+                </span>
+
+                <span class="badge bg-warning text-dark">
+
+                    💰 Medium
+
+                </span>
+
+            </div>
+
+            <a href="#"
+               class="btn btn-success mt-auto">
+
+                Learn More
+
+            </a>
 
         </div>
-
-        <button>
-
-            Learn More →
-
-        </button>
 
     </div>
 
 </div>
+
 <!-- ================= BIOMASS ================= -->
 
-<div class="card">
+<div class="col-lg-4 col-md-6">
 
-    <div class="image-container">
+    <div class="card h-100 shadow border-0">
 
         <img src="images/biomass.jpg"
+             class="card-img-top"
              alt="Biomass Energy">
 
-    </div>
+        <div class="card-body d-flex flex-column">
 
-    <div class="card-content">
+            <span class="badge bg-success mb-2 align-self-start">
 
-        <span class="category">
-
-            🌿 Biomass
-
-        </span>
-
-        <h3>Biomass Energy</h3>
-
-        <p>
-
-            Generate renewable electricity using organic
-            materials like agricultural waste, wood,
-            and biodegradable resources.
-
-        </p>
-
-        <div class="progress-title">
-
-            <span>Efficiency</span>
-
-            <span>40%</span>
-
-        </div>
-
-        <div class="progress">
-
-            <div class="progress-bar"
-                 style="width:40%;"></div>
-
-        </div>
-
-        <div class="badge-row">
-
-            <span class="badge efficiency">
-
-                ⚡ 40%
+                🌿 Biomass
 
             </span>
 
-            <span class="badge cost">
+            <h4 class="card-title text-success">
 
-                💰 Medium
+                Biomass Energy
 
-            </span>
+            </h4>
+
+            <p class="card-text">
+
+                Biomass energy converts organic materials
+                such as agricultural waste, wood, and
+                biodegradable resources into clean,
+                renewable electricity.
+
+            </p>
+
+            <div class="d-flex justify-content-between">
+
+                <small class="fw-bold">Efficiency</small>
+
+                <small>40%</small>
+
+            </div>
+
+            <div class="progress my-2">
+
+                <div class="progress-bar bg-success"
+                     style="width:40%"></div>
+
+            </div>
+
+            <div class="mb-3">
+
+                <span class="badge bg-success">
+
+                    ⚡ 40%
+
+                </span>
+
+                <span class="badge bg-warning text-dark">
+
+                    💰 Medium
+
+                </span>
+
+            </div>
+
+            <a href="#"
+               class="btn btn-success mt-auto">
+
+                Learn More
+
+            </a>
 
         </div>
-
-        <button>
-
-            Learn More →
-
-        </button>
 
     </div>
 
 </div>
-
 
 <!-- ================= GEOTHERMAL ================= -->
 
-<div class="card">
+<div class="col-lg-4 col-md-6">
 
-    <div class="image-container">
+    <div class="card h-100 shadow border-0">
 
         <img src="images/geothermal.jpg"
+             class="card-img-top"
              alt="Geothermal Energy">
 
-    </div>
+        <div class="card-body d-flex flex-column">
 
-    <div class="card-content">
+            <span class="badge bg-danger mb-2 align-self-start">
 
-        <span class="category">
-
-            🌋 Geothermal
-
-        </span>
-
-        <h3>Geothermal Energy</h3>
-
-        <p>
-
-            Produce electricity using heat stored
-            beneath the Earth's surface for reliable,
-            low-emission energy generation.
-
-        </p>
-
-        <div class="progress-title">
-
-            <span>Efficiency</span>
-
-            <span>20%</span>
-
-        </div>
-
-        <div class="progress">
-
-            <div class="progress-bar"
-                 style="width:20%;"></div>
-
-        </div>
-
-        <div class="badge-row">
-
-            <span class="badge efficiency">
-
-                ⚡ 20%
+                🌋 Geothermal
 
             </span>
 
-            <span class="badge cost">
+            <h4 class="card-title text-success">
 
-                💰 Medium
+                Geothermal Energy
 
-            </span>
+            </h4>
+
+            <p class="card-text">
+
+                Geothermal plants use heat stored beneath
+                the Earth's surface to generate reliable,
+                sustainable electricity throughout the year.
+
+            </p>
+
+            <div class="d-flex justify-content-between">
+
+                <small class="fw-bold">Efficiency</small>
+
+                <small>20%</small>
+
+            </div>
+
+            <div class="progress my-2">
+
+                <div class="progress-bar bg-success"
+                     style="width:20%"></div>
+
+            </div>
+
+            <div class="mb-3">
+
+                <span class="badge bg-success">
+
+                    ⚡ 20%
+
+                </span>
+
+                <span class="badge bg-warning text-dark">
+
+                    💰 Medium
+
+                </span>
+
+            </div>
+
+            <a href="#"
+               class="btn btn-success mt-auto">
+
+                Learn More
+
+            </a>
 
         </div>
-
-        <button>
-
-            Learn More →
-
-        </button>
 
     </div>
 
 </div>
-
 
 <!-- ================= TIDAL ================= -->
 
-<div class="card">
+<div class="col-lg-4 col-md-6">
 
-    <div class="image-container">
+    <div class="card h-100 shadow border-0">
 
         <img src="images/tidal.jpg"
+             class="card-img-top"
              alt="Tidal Energy">
 
-    </div>
+        <div class="card-body d-flex flex-column">
 
-    <div class="card-content">
+            <span class="badge bg-primary mb-2 align-self-start">
 
-        <span class="category">
-
-            🌊 Tidal
-
-        </span>
-
-        <h3>Tidal Energy</h3>
-
-        <p>
-
-            Generate renewable electricity using the
-            natural movement of ocean tides for
-            sustainable coastal power production.
-
-        </p>
-
-        <div class="progress-title">
-
-            <span>Efficiency</span>
-
-            <span>80%</span>
-
-        </div>
-
-        <div class="progress">
-
-            <div class="progress-bar"
-                 style="width:80%;"></div>
-
-        </div>
-
-        <div class="badge-row">
-
-            <span class="badge efficiency">
-
-                ⚡ 80%
+                🌊 Tidal
 
             </span>
 
-            <span class="badge cost">
+            <h4 class="card-title text-success">
 
-                💰 Medium
+                Tidal Energy
 
-            </span>
+            </h4>
+
+            <p class="card-text">
+
+                Tidal energy harnesses the natural movement
+                of ocean tides to generate clean and
+                renewable electricity for coastal regions.
+
+            </p>
+
+            <div class="d-flex justify-content-between">
+
+                <small class="fw-bold">Efficiency</small>
+
+                <small>80%</small>
+
+            </div>
+
+            <div class="progress my-2">
+
+                <div class="progress-bar bg-success"
+                     style="width:80%"></div>
+
+            </div>
+
+            <div class="mb-3">
+
+                <span class="badge bg-success">
+
+                    ⚡ 80%
+
+                </span>
+
+                <span class="badge bg-warning text-dark">
+
+                    💰 Medium
+
+                </span>
+
+            </div>
+
+            <a href="#"
+               class="btn btn-success mt-auto">
+
+                Learn More
+
+            </a>
 
         </div>
-
-        <button>
-
-            Learn More →
-
-        </button>
 
     </div>
 
 </div>
+
 </div>
 
-<footer>
+</div>
 
-    <div class="footer-container">
+</section>
 
-        <div>
+<!-- ================= FOOTER ================= -->
 
-            <h3>🌿 EcoEnergy</h3>
+<footer class="bg-dark text-white pt-5 pb-3">
 
-            <p>
+    <div class="container">
 
-                Renewable Energy Optimization System
-                designed to promote sustainable energy
-                solutions through modern web technology.
+        <div class="row">
+
+            <!-- About -->
+
+            <div class="col-lg-4 col-md-6 mb-4">
+
+                <h4 class="fw-bold">
+
+                    <i class="bi bi-lightning-charge-fill text-warning"></i>
+
+                    EcoEnergy
+
+                </h4>
+
+                <p>
+
+                    Renewable Energy Optimization System
+                    designed to educate users about clean,
+                    sustainable energy resources and promote
+                    an eco-friendly future.
+
+                </p>
+
+            </div>
+
+            <!-- Quick Links -->
+
+            <div class="col-lg-4 col-md-6 mb-4">
+
+                <h5 class="fw-bold">
+
+                    Quick Links
+
+                </h5>
+
+                <ul class="list-unstyled">
+
+                    <li class="mb-2">
+                        <a href="index.html"
+                           class="text-white text-decoration-none">
+
+                            Home
+
+                        </a>
+                    </li>
+
+                    <li class="mb-2">
+                        <a href="register.html"
+                           class="text-white text-decoration-none">
+
+                            Register
+
+                        </a>
+                    </li>
+
+                    <li class="mb-2">
+                        <a href="login.html"
+                           class="text-white text-decoration-none">
+
+                            Login
+
+                        </a>
+                    </li>
+
+                    <li class="mb-2">
+                        <a href="catalog.html"
+                           class="text-white text-decoration-none">
+
+                            Catalog
+
+                        </a>
+                    </li>
+
+                    <li class="mb-2">
+                        <a href="usage.html"
+                           class="text-white text-decoration-none">
+
+                            Usage
+
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <!-- Contact -->
+
+            <div class="col-lg-4 col-md-12 mb-4">
+
+                <h5 class="fw-bold">
+
+                    Contact Us
+
+                </h5>
+
+                <p>
+
+                    <i class="bi bi-envelope-fill me-2"></i>
+
+                    support@ecoenergy.com
+
+                </p>
+
+                <p>
+
+                    <i class="bi bi-telephone-fill me-2"></i>
+
+                    +91 123XXX7890
+
+                </p>
+
+                <p>
+
+                    <i class="bi bi-geo-alt-fill me-2"></i>
+
+                    Hyderabad, Telangana
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <hr class="border-secondary">
+
+        <div class="text-center">
+
+            <p class="mb-0">
+
+                © 2026 Renewable Energy Optimization System.
+                All Rights Reserved.
 
             </p>
 
         </div>
 
-        <div>
-
-            <h3>Quick Links</h3>
-
-            <ul class="footer-links">
-
-                <li><a href="index.html">Home</a></li>
-
-                <li><a href="register.html">Register</a></li>
-
-                <li><a href="login.html">Login</a></li>
-
-                <li><a href="catalog.html">Catalog</a></li>
-
-                <li><a href="usage.html">Usage</a></li>
-
-            </ul>
-
-        </div>
-
-        <div>
-
-            <h3>Contact</h3>
-
-            <p>Email: support@ecoenergy.com</p>
-
-            <p>Phone: 123XXX7890</p>
-
-            <p>Location: Green Energy Center</p>
-
-        </div>
-
-    </div>
-
-    <div class="footer-bottom">
-
-        <p>
-
-            © 2026 Renewable Energy Optimization System |
-            Powering a Sustainable Future 🌱
-
-        </p>
-
     </div>
 
 </footer>
 
-</div>
+<!-- Bootstrap JS -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Custom JavaScript -->
+
+<script src="js/script.js"></script>
 
 </body>
 

@@ -1,32 +1,131 @@
-// console.log("JavaScript Loaded");
+/* ===========================================
+   EcoEnergy - script.js
+   =========================================== */
 
-/*==========================================
-        CATALOG SEARCH
-==========================================*/
+// ======================
+// REGISTER
+// ======================
 
+const registerForm = document.getElementById("registerForm");
+
+if (registerForm) {
+
+    registerForm.addEventListener("submit", function (e) {
+
+        e.preventDefault();
+
+        const name = document.getElementById("fullName").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const mobile = document.getElementById("mobile").value.trim();
+        const city = document.getElementById("city").value.trim();
+
+        const password = document.getElementById("password").value;
+        const confirm = document.getElementById("confirmPassword").value;
+
+        if (password !== confirm) {
+
+            alert("Passwords do not match.");
+
+            return;
+        }
+
+        const user = {
+
+            name,
+            email,
+            mobile,
+            city,
+            password
+
+        };
+
+        localStorage.setItem("ecoUser", JSON.stringify(user));
+
+        alert("Registration Successful!");
+
+        window.location.href = "login.html";
+
+    });
+
+}
+
+// ======================
+// LOGIN
+// ======================
+
+const loginForm = document.getElementById("loginForm");
+
+if (loginForm) {
+
+    loginForm.addEventListener("submit", function (e) {
+
+        e.preventDefault();
+
+        const email = document.getElementById("loginEmail").value.trim();
+        const password = document.getElementById("loginPassword").value;
+
+        const storedUser = JSON.parse(localStorage.getItem("ecoUser"));
+
+        if (!storedUser) {
+
+            alert("Please register first.");
+
+            window.location.href = "register.html";
+
+            return;
+
+        }
+
+        if (
+
+            email === storedUser.email &&
+            password === storedUser.password
+
+        ) {
+
+            alert("Login Successful!");
+
+            window.location.href = "catalog.html";
+
+        }
+
+        else {
+
+            alert("Invalid Email or Password.");
+
+        }
+
+    });
+
+}
+
+// ======================
+// CATALOG SEARCH
+// ======================
 
 const searchBox = document.getElementById("searchBox");
 
 if (searchBox) {
 
-    searchBox.addEventListener("input", function () {
+    searchBox.addEventListener("keyup", function () {
 
-        const search = this.value.toLowerCase();
+        const value = this.value.toLowerCase();
 
-        const cards = document.querySelectorAll(".catalog-grid .card");
+        const cards = document.querySelectorAll(".card");
 
-        cards.forEach(function(card){
+        cards.forEach(card => {
 
             const text = card.innerText.toLowerCase();
 
-            if(text.includes(search)){
+            if (text.includes(value)) {
 
-                card.style.display = "";
+                card.parentElement.style.display = "";
 
             }
-            else{
 
-                card.style.display = "none";
+            else {
+
+                card.parentElement.style.display = "none";
 
             }
 
@@ -36,98 +135,100 @@ if (searchBox) {
 
 }
 
-/*==========================================
-    REGISTRATION VALIDATION
-==========================================*/
+// ======================
+// USAGE FORM
+// ======================
 
-const registerForm = document.getElementById("registerForm");
+const usageForm = document.getElementById("usageForm");
 
-if (registerForm) {
+if (usageForm) {
 
-    registerForm.addEventListener("submit", function (event) {
+    const usageTable = document.getElementById("usageTable");
 
-        event.preventDefault();
-        const name =
-            document.getElementById("name").value.trim();
+    let usageData = JSON.parse(localStorage.getItem("usageData")) || [];
 
-        const email =
-            document.getElementById("email").value.trim();
+    function loadUsage() {
 
-        const password =
-            document.getElementById("password").value;
+        usageTable.innerHTML = "";
 
-        if (
-            name === "" ||
-            email === "" ||
-            password === ""
-        ) {
+        usageData.forEach(item => {
 
-            alert("Please fill in all fields.");
-            // event.preventDefault();
+            usageTable.innerHTML += `
 
-            return;
+                <tr>
 
-        }
+                    <td>${item.date}</td>
 
-        if (password.length < 6) {
+                    <td>${item.source}</td>
 
-            alert("Password must contain at least 6 characters.");
+                    <td>${item.units} kWh</td>
 
-            event.preventDefault();
+                    <td>
 
-            return;
+                        <span class="badge bg-success">
 
-        }
+                            Saved
 
-        alert("Registration Successful!");
+                        </span>
 
-        setTimeout(function () {
+                    </td>
 
-            window.location.href = "catalog.html";
+                </tr>
 
-        }, 1000);
+            `;
 
-            });
+        });
+
+    }
+
+    loadUsage();
+
+    usageForm.addEventListener("submit", function (e) {
+
+        e.preventDefault();
+
+        const source = document.getElementById("energySource").value;
+
+        const units = document.getElementById("units").value;
+
+        const date = document.getElementById("usageDate").value;
+
+        const usage = {
+
+            source,
+            units,
+            date
+
+        };
+
+        usageData.push(usage);
+
+        localStorage.setItem(
+
+            "usageData",
+
+            JSON.stringify(usageData)
+
+        );
+
+        loadUsage();
+
+        usageForm.reset();
+
+        alert("Usage Added Successfully!");
+
+    });
 
 }
 
-/*==========================================
-        LOGIN VALIDATION
-==========================================*/
+// ======================
+// LOGOUT (Optional)
+// ======================
 
-const loginForm = document.getElementById("loginForm");
+function logout() {
 
-if (loginForm) {
+    alert("Logged Out Successfully.");
 
-    loginForm.addEventListener("submit", function (event) {
-        event.preventDefault();
-        const email =
-            document.getElementById("loginEmail").value.trim();
-
-        const password =
-            document.getElementById("loginPassword").value;
-
-        if (
-            email === "" ||
-            password === ""
-        ) {
-
-            alert("Please enter your email and password.");
-
-            // event.preventDefault();
-
-            return;
-
-        }
-
-        alert("Login Successful!");
-
-        setTimeout(function () {
-
-            window.location.href = "catalog.html";
-
-        }, 1000);
-
-    });
+    window.location.href = "login.html";
 
 }
